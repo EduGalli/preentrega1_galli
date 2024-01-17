@@ -41,15 +41,17 @@ while(respuestaUsuario>= 1 && respuestaUsuario<= 3){
         let calculoCompra=prompt("Ingrese la cantidad a comprar");
         calculoCompra=calculoCompra*5000;
         alert("El total de su compra es de $"+calculoCompra)
-    }
+    }else{
     if(respuestaUsuario== 2){
         let calculoCompra=prompt("Ingrese la cantidad a comprar");
         calculoCompra=calculoCompra*6000;
         alert("El total de su compra es de $"+calculoCompra) 
-    } else {
+    }
+    else {
         let calculoCompra=prompt("Ingrese la cantidad a comprar");
         calculoCompra=calculoCompra*9000;
         alert("El total de su compra es de $"+calculoCompra)
-    }    
+    }
+}    
     respuestaUsuario = prompt("Presiona x para finalizar");
 }
