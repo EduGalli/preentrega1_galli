@@ -1,4 +1,4 @@
-function renderProductos() {
+/*function renderProductos() {
     const productos = obtenerProductosLS();
     let contenido = "";
 
@@ -15,3 +15,27 @@ function renderProductos() {
 }
 
 renderProductos();
+*/
+const renderPosts = async () => {
+    const respuesta = await fetch('./js/producto.json');
+    const data = await respuesta.json();
+    let contenido = "";
+
+    for (const product of data) {
+        contenido += `<div class="col-md-4 mb-3">
+        <div class="card border-0">
+        <img src=${product.imagen} alt="${product.nombre}">
+        <div class="card-body text-center">
+            <h5 class="card-title">${product.nombre}</h5>
+            <p class="card-text">${product.descripcion}</p>
+            <p class="card-text">$${product.precio}</p>
+            <button class="btn-add-cart">Añadir al carrito</button>
+        </div>
+        </div>
+        </div>`;
+    }
+
+    document.getElementById("productos").innerHTML = contenido;
+}
+
+renderPosts();
