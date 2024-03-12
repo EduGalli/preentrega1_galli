@@ -22,7 +22,7 @@ const getProducts = async () =>{
         shopContent.append(content);
       
         let comprar = document.createElement("button");
-        comprar.innerText = "comprar";
+        comprar.innerText = "Comprar";
         comprar.className = "comprar";
       
         content.append(comprar);
